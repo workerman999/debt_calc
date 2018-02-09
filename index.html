@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link href="style.css" rel="stylesheet">
+	<title>Калькулятор</title>
+</head>
+<body onload="getDate()">
+	<h1>Калькулятор займа</h1>
+    
+        <label class="cash" for="amount">Сумма займа (руб.)&nbsp</label>
+        <input type="range" min="1000" max="35000" value="1000" id="amount" step="1000" oninput="outputCash(this)">
+        <output class="cash1" for="amount" id="out1">1000</output>
+        <br>
+        <label class="cash" for="day">Срок займа (в днях)</label>
+        <input type="range" min="5" max="45" value="5" id="day" step="1" oninput="outputDay(this)">
+        <output class="cash1" for="day" id="out2">5</output>
+    
+    <br />
+	<br />
+    <div class="cash">
+    	<p>Сумма возврата:
+    		<span id="outputCash">1001.66</span>
+    	</p> 	
+    </div>
+    <div class="day">
+    	<p>Дата возврата:
+    		<span id="outputDay"></span>
+    	</p>    	
+    </div>
+    <script src="scripts.js"></script>
+</body>
+	
